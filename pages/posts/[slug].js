@@ -48,7 +48,7 @@ export default function Post({ post, morePosts, preview }) {
                 </span>
                 <PostBody content={post.content} />
                 <footer>
-                  <ul class="stats">
+                  <ul className="stats">
                     <li>
                       <a href={`/categories/${post.category.slug}`}>
                           {post.category.title}
