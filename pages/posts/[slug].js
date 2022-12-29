@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import ErrorPage from 'next/error'
-import Container from '../../components/container'
 import PostBody from '../../components/post-body'
 import MoreStories from '../../components/more-stories'
 import Header from '../../components/header'
@@ -11,6 +10,7 @@ import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import { CMS_NAME } from '../../lib/constants'
+import DateComponent from '../../components/date'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -20,36 +20,48 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.coverImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-            <SectionSeparator />
-            {morePosts && morePosts.length > 0 && (
-              <MoreStories posts={morePosts} />
+    <div className='single'>
+      <div id='wrapper'>
+        <Layout preview={preview}>
+          <div id='main'>
+            {router.isFallback ? (
+              <PostTitle>Loading…</PostTitle>
+            ) : (
+              <article className="post">
+                <header>
+                  <div className="title">
+                      <h2>{post.title}</h2>
+                      <p>{post.subtitle}</p>
+                  </div>
+                  <div className="meta">
+                      <time className="published">
+                          <DateComponent dateString={post.date}/>
+                      </time>
+                      <div className="author">
+                          <span className="name">{post.author.name}</span>
+                          <img src={post.author.picture.url}/>
+                      </div>
+                  </div>
+                </header>
+                <span className="image featured">
+                  <img src={post.coverImage.url}/>
+                </span>
+                <PostBody content={post.content} />
+                <footer>
+                  <ul class="stats">
+                    <li>
+                      <a href={`/categories/${post.category.slug}`}>
+                          {post.category.title}
+                      </a>
+                    </li>
+                  </ul>
+                </footer>
+              </article>
             )}
-          </>
-        )}
-      </Container>
-    </Layout>
+            </div>
+        </Layout>
+      </div>
+    </div>
   )
 }
 

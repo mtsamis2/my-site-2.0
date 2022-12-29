@@ -37,6 +37,12 @@ export default function Meta() {
         content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+
+      <link rel="stylesheet" href="/styles/assets/css/main.css" />
+      <script src="/styles/assets/js/jquery.min.js" />
+      <script src="/styles/assets/js/skel.min.js" />
+      <script src="/styles/assets/js/util.js" />
+      <script src="/styles/assets/js/main.js" />
     </Head>
   )
 }

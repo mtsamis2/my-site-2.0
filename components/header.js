@@ -1,12 +1,25 @@
-import Link from 'next/link'
+const Header = () => (
+  <header id="header">
+      <h1><a href="/">Mike Tsamis</a></h1>
+      <nav className="links">
+          <ul>
+              <li><a href="/categories/raspberry-pi-projects">Raspberry Pi Projects</a></li>
+              <li><a href="/categories/software-development">Software Development</a></li>
+              <li><a href="/categories/git-faq">Git FAQ</a></li>
+          </ul>
+      </nav>
+      <nav className="main">
+          <ul>
+              <li className="search">
+                  <a className="fa-search" href="#search">Search</a>
+                  <form id="search" action="https://google.com/search" method="get">
+                      <input type="hidden" name="sitesearch" value="miketsamis.com" />
+                      <input type="text" name="q" placeholder="Search" />
+                  </form>
+              </li>
+          </ul>
+      </nav>
+  </header>
+)
 
-export default function Header() {
-  return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/" className="hover:underline">
-        Blog
-      </Link>
-      .
-    </h2>
-  )
-}
+export default Header
