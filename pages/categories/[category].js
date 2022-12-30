@@ -1,14 +1,8 @@
 import { useRouter } from 'next/router'
-import Head from 'next/head'
 import ErrorPage from 'next/error'
-import PostBody from '../../components/post-body'
-import MoreStories from '../../components/more-stories'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
 import { getAllCategories, getPostsByCategory, getCategoryBySlug } from '../../lib/api'
 import PostTitle from '../../components/post-title'
-import { CMS_NAME } from '../../lib/constants'
 import DateComponent from '../../components/date'
 
 export default function Category({ posts, category, preview }) {
