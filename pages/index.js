@@ -3,6 +3,7 @@ import Sidebar from '../components/sidebar'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/api'
 import DateComponent from '../components/date'
+import Script from 'next/script';
 
 export default function Index({ preview, allPosts }) {
   return (
