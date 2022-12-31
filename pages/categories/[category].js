@@ -4,6 +4,7 @@ import Layout from '../../components/layout'
 import { getAllCategories, getPostsByCategory, getCategoryBySlug } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
+import Script from "next/script";
 
 export default function Category({ posts, category, preview }) {
   const router = useRouter()
@@ -14,6 +15,19 @@ export default function Category({ posts, category, preview }) {
 
   return (
     <div className='single'>
+      <div className="align-center">
+        <Script
+          id="Adsense-id"
+          data-ad-client="ca-pub-5287798851641238"
+          async="true"
+          strategy="beforeInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          slot='7619023422'
+          style={{ display:'block'}}
+          format='auto'
+          responsive='true'
+        />
+      </div>
      <div id='wrapper'>
       <Layout preview={preview}>
         {router.isFallback ?
