@@ -31,6 +31,18 @@ export default function Meta() {
       <script src="/styles/assets/js/skel.min.js" />
       <script src="/styles/assets/js/util.js" />
       <script src="/styles/assets/js/main.js" />
+
+      {/* Google AdSense */}
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script
+          dangerouslySetInnerHTML={{
+          __html: `
+          (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-5287798851641238",
+              enable_page_level_ads: true
+          });
+      `}}
+      />
     </Head>
   )
 }
