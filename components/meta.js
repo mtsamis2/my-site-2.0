@@ -31,6 +31,8 @@ export default function Meta() {
       <script src="/styles/assets/js/skel.min.js" />
       <script src="/styles/assets/js/util.js" />
       <script src="/styles/assets/js/main.js" />
+      {/* Google Search Console */}
+      <meta name="google-site-verification" content="9cIjLHNbjwsAGc0xOD498waalz2pWlgk8m5LmLdSLMY" />
       {/* Google AdSense */}
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </Head>
