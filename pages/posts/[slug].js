@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import PostBody from '../../components/post-body'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
+import marked from 'marked';
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, preview }) {
   const router = useRouter()
 
   if (!router.isFallback && !post) {
@@ -40,7 +40,7 @@ export default function Post({ post, morePosts, preview }) {
                 <span className="image featured">
                   <img src={post.coverImage.url}/>
                 </span>
-                <PostBody content={post.content} />
+                <div dangerouslySetInnerHTML={createMarkup(post.body)} />
                 <footer>
                   <ul className="stats">
                     <li>
@@ -57,6 +57,10 @@ export default function Post({ post, morePosts, preview }) {
       </div>
     </div>
   )
+}
+
+function createMarkup(body) {
+  return {__html: marked.parse(body, {sanitize: true})};
 }
 
 export async function getStaticProps({ params, preview = false }) {
