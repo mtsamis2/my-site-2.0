@@ -5,7 +5,6 @@ import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
-import Script from 'next/script';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -19,17 +18,6 @@ export default function Post({ post, morePosts, preview }) {
       <div id='wrapper'>
         <Layout preview={preview}>
           <div id='main'>
-            <Script
-              id="Adsense-id"
-              data-ad-client="ca-pub-5287798851641238"
-              async="true"
-              strategy="beforeInteractive"
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-              slot='9201055683'
-              style={{ display:'block'}}
-              format='auto'
-              responsive='true'
-            />
             {router.isFallback ? (
               <PostTitle>Loading…</PostTitle>
             ) : (
@@ -62,17 +50,6 @@ export default function Post({ post, morePosts, preview }) {
                     </li>
                   </ul>
                 </footer>
-                <Script
-                  id="Adsense-id"
-                  data-ad-client="ca-pub-5287798851641238"
-                  async="true"
-                  strategy="beforeInteractive"
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                  slot='9388207227'
-                  style={{ display:'block'}}
-                  format='auto'
-                  responsive='true'
-                />
               </article>
             )}
             </div>

@@ -1,24 +1,12 @@
 import Footer from './footer'
 import Intro from './intro'
 import Featured from './featured'
-import Script from 'next/script';
 
 const Sidebar = () => (
     <div>
         <Intro className="introSideBar" />
         <section id="sidebar">
             <Featured/>
-            <Script
-                id="Adsense-id"
-                data-ad-client="ca-pub-5287798851641238"
-                async="true"
-                strategy="beforeInteractive"
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                slot='8232297400'
-                style={{ display:'block'}}
-                format='auto'
-                responsive='true'
-            />
             <section className="blurb">
                 <h2>About</h2>
                 <p>
