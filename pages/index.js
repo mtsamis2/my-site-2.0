@@ -9,7 +9,18 @@ export default function Index({ preview, allPosts }) {
     <div id='wrapper'>
       <Layout preview={preview}>
         <Intro className="introIndex" />
-        <div id = 'main'>
+        <div id='main'>
+          <Script
+              id="Adsense-id"
+              data-ad-client="ca-pub-5287798851641238"
+              async="true"
+              strategy="beforeInteractive"
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+              slot='8691410483'
+              style={{ display:'block'}}
+              format='auto'
+              responsive='true'
+          />
          {allPosts.map((post, key) => (
             <article className="post" key={key}>
                 <header>

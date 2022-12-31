@@ -4,7 +4,7 @@ import Layout from '../../components/layout'
 import { getAllCategories, getPostsByCategory, getCategoryBySlug } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
-import Script from "next/script";
+import Script from 'next/script';
 
 export default function Category({ posts, category, preview }) {
   const router = useRouter()
