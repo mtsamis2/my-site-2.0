@@ -59,7 +59,20 @@ export default function Category({ posts, category, preview }) {
         }
       </Layout>
      </div>
+     <div className="align-center">
+      <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-5287798851641238"
+        async="true"
+        strategy="beforeInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        slot='6152036699'
+        style={{ display:'block'}}
+        format='auto'
+        responsive='true'
+      />
     </div>
+  </div>
   )
 }
 
