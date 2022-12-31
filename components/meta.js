@@ -1,8 +1,10 @@
 import Head from 'next/head'
 
-export default function Meta() {
+export default function Meta(props) {
   return (
     <Head>
+      <title>{props.title}</title>
+      <meta name="description" content={props.description}/>
       <link
         rel="apple-touch-icon"
         sizes="180x180"

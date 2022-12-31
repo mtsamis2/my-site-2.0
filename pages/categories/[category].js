@@ -15,35 +15,37 @@ export default function Category({ posts, category, preview }) {
   return (
     <div className='single'>
      <div id='wrapper'>
-      <Layout preview={preview}>
-        {router.isFallback ?
-          (<PostTitle>Loading…</PostTitle>) :
-          (
-            <>
-              <header>
-                  <h3>Posts with the category "{category.title}"</h3>
-              </header>
-              <div className="categories">
-                {posts.map((post, key) => (
-                  <article className="mini-post" key={key}>
-                    <header>
-                      <h3>
-                          <a href={`/posts/${post.slug}`} >{post.title}</a>
-                      </h3>
-                      <time className="published">
-                        <DateComponent dateString={post.date}/>
-                      </time>
-                    </header>
-                    <a className="image" href={`/posts/${post.slug}`}>
-                      <img src={post.coverImage.url}/>
-                    </a>
-                  </article>
-                ))}
-              </div>
-            </>
-          )
-        }
-      </Layout>
+      {router.isFallback ?
+        (<PostTitle>Loading…</PostTitle>) :
+        (
+          <Layout
+            preview={preview}
+            title={`${category.title} - MikeTsamis.com`}
+            description={`Posts with the category "${category.title}"`}
+          >
+            <header>
+                <h3>Posts with the category "{category.title}"</h3>
+            </header>
+            <div className="categories">
+              {posts.map((post, key) => (
+                <article className="mini-post" key={key}>
+                  <header>
+                    <h3>
+                        <a href={`/posts/${post.slug}`} >{post.title}</a>
+                    </h3>
+                    <time className="published">
+                      <DateComponent dateString={post.date}/>
+                    </time>
+                  </header>
+                  <a className="image" href={`/posts/${post.slug}`}>
+                    <img src={post.coverImage.url}/>
+                  </a>
+                </article>
+              ))}
+            </div>
+          </Layout>
+        )
+      }
      </div>
   </div>
   )

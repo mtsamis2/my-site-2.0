@@ -16,11 +16,15 @@ export default function Post({ post, preview }) {
   return (
     <div className='single'>
       <div id='wrapper'>
-        <Layout preview={preview}>
-          <div id='main'>
-            {router.isFallback ? (
-              <PostTitle>Loading…</PostTitle>
-            ) : (
+        <div id='main'>
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <Layout
+              preview={preview}
+              title={`${post.title} - MikeTsamis.com`}
+              description={post.excerpt}
+            >
               <article className="post">
                 <header>
                   <div className="title">
@@ -51,9 +55,9 @@ export default function Post({ post, preview }) {
                   </ul>
                 </footer>
               </article>
-            )}
-            </div>
-        </Layout>
+            </Layout>
+          )}
+        </div>
       </div>
     </div>
   )

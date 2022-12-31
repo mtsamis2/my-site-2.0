@@ -7,7 +7,11 @@ import DateComponent from '../components/date'
 export default function Index({ preview, allPosts }) {
   return (
     <div id='wrapper'>
-      <Layout preview={preview}>
+      <Layout
+        preview={preview}
+        title={'Home - MikeTsamis.com'}
+        description={'I am a Senior Software Engineer based in NYC. This blog is used to share my own projects, findings, and opinions. My objective is to share fun, interesting, and useful tech projects and break them down as simple as possible to inspire more interest in STEM.'}
+      >
         <Intro className="introIndex" />
         <div id='main'>
          {allPosts.map((post, key) => (
