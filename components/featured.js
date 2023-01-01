@@ -6,6 +6,15 @@ const Featured = () => (
             <li>
                 <article>
                     <header>
+                        <h3><a href="/posts/my-udacity-course-for-becoming-a-react-developer">My Udacity Course for Becoming a React Developer</a></h3>
+                        <time className="published" dateTime="2015-10-20">January 1, 2023</time>
+                    </header>
+                    <a href="/posts/my-udacity-course-for-becoming-a-react-developer" className="image"><img src="//images.ctfassets.net/9h0x5en6hj8l/78I4zfNzDMBoDdCiPfrCRk/7df4156cedfebff0382dcb386c6993b5/carousel-gf28a64b2b_1280.png" alt="" /></a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <header>
                         <h3><a href="/posts/lazy-loading-images-in-react-js">LAZY LOADING IMAGES IN REACT JS</a></h3>
                         <time className="published" dateTime="2015-10-20">March 9, 2018</time>
                     </header>
