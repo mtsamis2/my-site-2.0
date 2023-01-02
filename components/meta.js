@@ -1,6 +1,22 @@
 import Head from 'next/head'
+import { gtag, GA_TRACKING_ID } from '../lib/gtag'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react';
 
 export default function Meta(props) {
+  const router = useRouter();
+  
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <Head>
       <title>{props.title}</title>
@@ -37,6 +53,17 @@ export default function Meta(props) {
       <meta name="google-site-verification" content="9cIjLHNbjwsAGc0xOD498waalz2pWlgk8m5LmLdSLMY" />
       {/* Google AdSense */}
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5287798851641238" crossorigin="anonymous"></script>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}/>
+      <script
+          dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_TRACKING_ID}');
+      `}}
+      />
     </Head>
   )
 }
