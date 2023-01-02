@@ -1478,7 +1478,7 @@
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
-		color: inherit;
+		color: #2ebaae;
 		text-decoration: none;
 	}
 
@@ -1490,13 +1490,12 @@
 		}
 
 		a:hover {
-			border-bottom-color: transparent;
-			color: #2ebaae !important;
+			color: #D14551 !important;
 		}
 
-			a:hover:before {
-				color: #2ebaae !important;
-			}
+		a:hover:before {
+			color: #D14551 !important;
+		}
 
 	strong, b {
 		color: #3c3b3b;
@@ -1522,10 +1521,14 @@
 		text-transform: uppercase;
 	}
 
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
-			border-bottom: 0;
-		}
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		color: inherit;
+		border-bottom: 0;
+	}
+
+	h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+		color: #2ebaae !important;
+	}
 
 	h2 {
 		font-size: 1.1em;

@@ -9,73 +9,88 @@
 
 <url>
   <loc>https://www.miketsamis.com/</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.miketsamis.com/categories/raspberry-pi-projects</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.miketsamis.com/categories/software-development</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.miketsamis.com/categories/git-faq</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.miketsamis.com/posts/merge-and-deduplicate-arrays-in-javascript</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <loc>https://www.miketsamis.com/posts/my-udacity-course-for-becoming-a-react-developer</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.miketsamis.com/posts/4-clean-code-principles-every-developer-should-know</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.miketsamis.com/posts/how-to-merge-and-deduplicate-arrays-in-javascript</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.miketsamis.com/posts/git-faq-list-all-branches</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <loc>https://www.miketsamis.com/posts/git-faq-7-ways-to-to-list-all-branches-in-git</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.miketsamis.com/posts/git-faq-how-to-reset-origin-master-to-a-specific-commit</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.miketsamis.com/posts/git-faq-how-to-undo-a-commit-to-a-branch</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.miketsamis.com/posts/git-faq-how-to-delete-a-branch-both-locally-and-remotely</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.miketsamis.com/posts/git-faq-how-to-rename-a-local-branch</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.miketsamis.com/posts/lazy-loading-images-in-react-js</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.miketsamis.com/posts/automating-personalized-email-alerts</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.miketsamis.com/posts/cpu-mining-altcoins-turtlecoin-trtl-on-an-sbc</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.miketsamis.com/posts/building-a-portable-vpn-router-with-an-ad-blocker</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.miketsamis.com/posts/building-a-retro-gaming-machine-and-home-media-center</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.miketsamis.com/posts/git-faq-how-to-reset-origin-master-to-a-specific-commit</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.miketsamis.com/posts/git-faq-how-to-undo-a-commit-to-a-branch</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.miketsamis.com/posts/git-faq-how-to-delete-a-branch-both-locally-and-remotely</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.miketsamis.com/posts/git-faq-how-to-rename-a-local-branch</loc>
-  <lastmod>2019-10-24T02:30:33+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://www.miketsamis.com/posts/building-a-portable-vpn-router-with-an-ad-blocker</loc>
+  <lastmod>2023-01-02T14:34:54+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
