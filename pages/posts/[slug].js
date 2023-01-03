@@ -5,8 +5,10 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
 import marked from 'marked';
+import getYouTubeID from 'get-youtube-id';
+import Video from '../../components/video'
 
-export default function Post({ post, preview }) {
+export default function Post({ preview, post, videoId }) {
   const router = useRouter()
 
   if (!router.isFallback && !post) {
@@ -45,6 +47,11 @@ export default function Post({ post, preview }) {
                   <img src={post.coverImage.url}/>
                 </span>
                 <div dangerouslySetInnerHTML={createMarkup(post.body)} />
+                {videoId != null ?
+                  <div>
+                      <Video videoId={videoId} />
+                  </div>
+                  : null}
                 <footer>
                   <ul className="stats">
                     <li>
@@ -70,10 +77,13 @@ function createMarkup(body) {
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
 
+  const videoId = getYouTubeID(data?.post.body);
+
   return {
     props: {
       preview,
       post: data?.post ?? null,
+      videoId,
       morePosts: data?.morePosts ?? null,
     },
   }
