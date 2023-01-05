@@ -24,10 +24,10 @@ const Featured = () => (
             <li>
                 <article>
                     <header>
-                        <h3><a href="/posts/cpu-mining-altcoins-turtlecoin-trtl-on-an-sbc">CPU MINING ALTCOINS (TURTLECOIN TRTL) ON AN SBC</a></h3>
+                        <h3><a href="/posts/cpu-mining-altcoins-on-an-sbc">CPU MINING ALTCOINS (TURTLECOIN TRTL) ON AN SBC</a></h3>
                         <time className="published" dateTime="2015-10-20">January 26, 2018</time>
                     </header>
-                    <a href="/posts/cpu-mining-altcoins-turtlecoin-trtl-on-an-sbc" className="image"><img src="//images.ctfassets.net/9h0x5en6hj8l/1JPCQizNLCAMA8qm0WIYYe/39683d293f73c6ec5690a51bea0d5b14/image-3046639_1280.png" alt="" /></a>
+                    <a href="/posts/cpu-mining-altcoins-on-an-sbc" className="image"><img src="//images.ctfassets.net/9h0x5en6hj8l/1JPCQizNLCAMA8qm0WIYYe/39683d293f73c6ec5690a51bea0d5b14/image-3046639_1280.png" alt="" /></a>
                 </article>
             </li>
             <li>

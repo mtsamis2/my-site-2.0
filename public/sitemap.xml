@@ -38,12 +38,12 @@
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.miketsamis.com/posts/how-to-merge-and-deduplicate-arrays-in-javascript</loc>
+  <loc>https://www.miketsamis.com/posts/merge-and-deduplicate-arrays-in-javascript</loc>
   <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.miketsamis.com/posts/git-faq-7-ways-to-to-list-all-branches-in-git</loc>
+  <loc>https://www.miketsamis.com/posts/git-faq-list-all-branches</loc>
   <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -78,7 +78,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.miketsamis.com/posts/cpu-mining-altcoins-turtlecoin-trtl-on-an-sbc</loc>
+  <loc>https://www.miketsamis.com/posts/cpu-mining-altcoins-on-an-sbc</loc>
   <lastmod>2023-01-02T14:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>

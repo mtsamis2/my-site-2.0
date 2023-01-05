@@ -77,7 +77,7 @@ function createMarkup(body) {
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
 
-  const videoId = getYouTubeID(data?.post.body);
+  const videoId = getYouTubeID(data?.post?.body);
 
   return {
     props: {
