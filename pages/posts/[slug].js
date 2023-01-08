@@ -1,14 +1,17 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Layout from '../../components/layout'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
+import { getAllPostsWithSlug, getPost } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
-import marked from 'marked';
-import getYouTubeID from 'get-youtube-id';
+import marked from 'marked'
+import getYouTubeID from 'get-youtube-id'
 import Video from '../../components/video'
+import { DiscussionEmbed } from 'disqus-react'
 
-export default function Post({ preview, post, videoId }) {
+const WEBSITE = "https://www.miketsamis.com";
+
+export default function Post({ preview, post, videoId, disqusShortname, disqusConfig }) {
   const router = useRouter()
 
   if (!router.isFallback && !post) {
@@ -62,6 +65,7 @@ export default function Post({ preview, post, videoId }) {
                   </ul>
                 </footer>
               </article>
+              <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
             </Layout>
           )}
         </div>
@@ -75,16 +79,25 @@ function createMarkup(body) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview)
+  const data = await getPost(params.slug, preview)
 
   const videoId = getYouTubeID(data?.post?.body);
+  const currentUrl = WEBSITE + `/posts/${params.slug}`;
+
+  const disqusShortname = 'MikeTsamis';
+  const disqusConfig = {
+    url: currentUrl,
+    identifier: data?.post.sys.id,
+    title: data?.post.title,
+  };
 
   return {
     props: {
       preview,
       post: data?.post ?? null,
       videoId,
-      morePosts: data?.morePosts ?? null,
+      disqusShortname,
+      disqusConfig
     },
   }
 }
