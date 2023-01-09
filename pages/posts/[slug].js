@@ -42,12 +42,16 @@ export default function Post({ preview, post, videoId, disqusShortname, disqusCo
                       </time>
                       <div className="author">
                           <span className="name">{post.author.name}</span>
-                          <img src={post.author.picture.url}/>
+                          <img
+                            src={post.author.picture.url}
+                            atl={`An image of the author ${post.author.name}`}
+                            loading='lazy'
+                          />
                       </div>
                   </div>
                 </header>
                 <span className="image featured">
-                  <img src={post.coverImage.url}/>
+                  <img src={post.coverImage.url} alt={`The cover image for the article '${post.title}'`} loading='lazy'/>
                 </span>
                 <div dangerouslySetInnerHTML={createMarkup(post.body)} />
                 {videoId != null ?
