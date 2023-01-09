@@ -46,10 +46,6 @@ export default function Meta(props) {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
       <link rel="stylesheet" href="/styles/assets/css/main.css" />
-      <script src="/styles/assets/js/jquery.min.js" />
-      <script src="/styles/assets/js/skel.min.js" />
-      <script src="/styles/assets/js/util.js" />
-      <script src="/styles/assets/js/main.js" />
       {/* Google Search Console */}
       <meta name="google-site-verification" content="9cIjLHNbjwsAGc0xOD498waalz2pWlgk8m5LmLdSLMY" />
       {/* Google AdSense */}

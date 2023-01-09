@@ -8,6 +8,7 @@ const Header = () => (
               <li><a href="/categories/git-faq">Git FAQ</a></li>
           </ul>
       </nav>
+      {/* TODO: Create a Searchbar component
       <nav className="main">
           <ul>
               <li className="search">
@@ -19,6 +20,7 @@ const Header = () => (
               </li>
           </ul>
       </nav>
+    */}
   </header>
 )
 
