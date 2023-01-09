@@ -1,6 +1,6 @@
 const Intro = (props) => (
   <section id="intro" className={props.className}>
-      <div className="logo"><img src="/images/logo.png" alt="MikeTsamis.com Logo" /></div>
+      <div className="logo"><img src="/images/logo.png" alt="MikeTsamis.com Logo" height={72} width={72}/></div>
           <header>
               <h2>Mike<br/>Tsamis</h2>
               <p>IDEATE. CREATE. ITERATE. REPEAT.</p>
