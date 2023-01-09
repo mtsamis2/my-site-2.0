@@ -40,7 +40,12 @@ export default function Index({ preview, allPosts }) {
                     </div>
                 </header>
                 <a className="image featured" href={`/posts/${post.slug}`}>
-                    <img src={post.coverImage.url} alt={`The cover image for the article '${post.title}'`} loading='lazy'/>
+                    <img
+                      src={post.coverImage.url}
+                      alt={`The cover image for the article '${post.title}'`}
+                      aria-label={`The cover image for the article '${post.title}'`}
+                      loading='lazy'
+                    />
                 </a>
                 <p>{post.excerpt}</p>
                 <footer>

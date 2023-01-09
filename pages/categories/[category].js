@@ -37,7 +37,12 @@ export default function Category({ posts, category, preview }) {
                     </time>
                   </header>
                   <a className="image" href={`/posts/${post.slug}`}>
-                    <img src={post.coverImage.url} alt={`The cover image for the article '${post.title}'`} loading='lazy'/>
+                    <img
+                      src={post.coverImage.url}
+                      alt={`The cover image for the article '${post.title}'`}
+                      aria-label={`The cover image for the article '${post.title}'`}
+                      loading='lazy'
+                    />
                   </a>
                 </article>
               ))}

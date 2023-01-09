@@ -50,7 +50,12 @@ export default function Post({ preview, post, videoId, disqusShortname, disqusCo
                   </div>
                 </header>
                 <span className="image featured">
-                  <img src={post.coverImage.url} alt={`The cover image for the article '${post.title}'`} loading='lazy'/>
+                  <img
+                    src={post.coverImage.url}
+                    alt={`The cover image for the article '${post.title}'`}
+                    aria-label={`The cover image for the article '${post.title}'`}
+                    loading='lazy'
+                  />
                 </span>
                 <div dangerouslySetInnerHTML={createMarkup(post.body)} />
                 {videoId != null ?

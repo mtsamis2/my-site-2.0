@@ -2141,12 +2141,28 @@
 				width: 100%;
 			}
 
+			@media screen and (max-width: 980px) {
+
+				img {
+					width: 100%;
+				}
+			}
+
 			@media screen and (max-width: 736px) {
 
 				.image.featured {
 					margin: 0 0 1.5em 0;
 				}
+
+				img {
+					width: 100%;
+				}
 			}
+		
+		img.logo-img {
+			height: 72px;
+			width: 72px;
+		}
 
 		.image.main {
 			display: block;
