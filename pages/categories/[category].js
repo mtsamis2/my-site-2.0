@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Layout from '../../components/layout'
 import { getAllCategories, getPostsByCategory, getCategoryBySlug } from '../../lib/api'
-import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
 
 export default function Category({ posts, category, preview }) {
@@ -16,7 +15,7 @@ export default function Category({ posts, category, preview }) {
     <div className='single'>
      <div id='wrapper'>
       {router.isFallback ?
-        (<PostTitle>Loading…</PostTitle>) :
+        (<h1>Loading…</h1>) :
         (
           <Layout
             preview={preview}
@@ -38,7 +37,7 @@ export default function Category({ posts, category, preview }) {
                     </time>
                   </header>
                   <a className="image" href={`/posts/${post.slug}`}>
-                    <img src={post.coverImage.url}/>
+                    <img src={post.coverImage.url} alt={`The cover image for the article '${post.title}'`} loading='lazy'/>
                   </a>
                 </article>
               ))}

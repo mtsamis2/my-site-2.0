@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPost } from '../../lib/api'
-import PostTitle from '../../components/post-title'
 import DateComponent from '../../components/date'
 import marked from 'marked'
 import getYouTubeID from 'get-youtube-id'
@@ -23,7 +22,7 @@ export default function Post({ preview, post, videoId, disqusShortname, disqusCo
       <div id='wrapper'>
         <div id='main'>
           {router.isFallback ? (
-            <PostTitle>Loading…</PostTitle>
+            <h1>Loading…</h1>
           ) : (
             <Layout
               preview={preview}
