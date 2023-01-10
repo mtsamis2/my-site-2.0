@@ -50,6 +50,7 @@ export default function Meta(props) {
       {/* Google AdSense */}
       <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5287798851641238" crossorigin="anonymous" defer></script>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <script src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} defer/>
       <script
           dangerouslySetInnerHTML={{
           __html: `
