@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    loader: 'custom',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        port: '',
+        pathname: '/9h0x5en6hj8l/**',
+      },
+    ],
   },
   async redirects() {
     return [

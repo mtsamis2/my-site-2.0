@@ -1,7 +1,9 @@
+import Image from 'next/image'
+
 const Intro = (props) => (
   <section id="intro" className={props.className}>
       <div className="logo">
-        <img
+        <Image
           className="logo-img"
           src="/images/logo.png"
           alt="MikeTsamis.com Logo"
