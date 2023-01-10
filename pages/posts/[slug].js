@@ -7,6 +7,7 @@ import marked from 'marked'
 import getYouTubeID from 'get-youtube-id'
 import Video from '../../components/video'
 import { DiscussionEmbed } from 'disqus-react'
+import Image from 'next/image'
 
 const WEBSITE = "https://www.miketsamis.com";
 
@@ -41,20 +42,25 @@ export default function Post({ preview, post, videoId, disqusShortname, disqusCo
                       </time>
                       <div className="author">
                           <span className="name">{post.author.name}</span>
-                          <img
-                            src={post.author.picture.url}
-                            atl={`An image of the author ${post.author.name}`}
-                            loading='lazy'
-                          />
+                          <div className="authorImage">
+                            <Image
+                              src={post.author.picture.url}
+                              alt={`An image of the author ${post.author.name}`}
+                              loading='lazy'
+                              fill
+                              className={'nextImage'}
+                            />
+                          </div>
                       </div>
                   </div>
                 </header>
                 <span className="image featured">
-                  <img
+                  <Image
                     src={post.coverImage.url}
                     alt={`The cover image for the article '${post.title}'`}
                     aria-label={`The cover image for the article '${post.title}'`}
-                    loading='lazy'
+                    fill
+                    className={'nextImage'}
                   />
                 </span>
                 <div dangerouslySetInnerHTML={createMarkup(post.body)} />

@@ -3,6 +3,7 @@ import Sidebar from '../components/sidebar'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/api'
 import DateComponent from '../components/date'
+import Image from 'next/image'
 
 export default function Index({ preview, allPosts }) {
   return (
@@ -31,20 +32,25 @@ export default function Index({ preview, allPosts }) {
                         </time>
                         <div className="author">
                             <span className="name">{post.author.name}</span>
-                            <img
-                              src={post.author.picture.url}
-                              atl={`An image of the author ${post.author.name}`}
-                              loading='lazy'
-                            />
+                            <div className="authorImage">
+                              <Image
+                                src={post.author.picture.url}
+                                alt={`An image of the author ${post.author.name}`}
+                                loading='lazy'
+                                fill
+                                className={'nextImage'}
+                              />
+                            </div>
                         </div>
                     </div>
                 </header>
                 <a className="image featured" href={`/posts/${post.slug}`}>
-                    <img
+                    <Image
                       src={post.coverImage.url}
                       alt={`The cover image for the article '${post.title}'`}
                       aria-label={`The cover image for the article '${post.title}'`}
-                      loading='lazy'
+                      fill
+                      className={'nextImage'}
                     />
                 </a>
                 <p>{post.excerpt}</p>

@@ -1661,9 +1661,13 @@
 			display: block;
 			width: 4em;
 		}
-
+		/*
 		.author:hover .name {
-			/* border-bottom-color: transparent; */
+			border-bottom-color: transparent;
+		}
+		*/
+		.authorImage {
+			width: 4em;
 		}
 
 /* Blurb */
@@ -1840,7 +1844,7 @@
 			}
 
 /* Form */
-
+/*
 	form {
 		margin: 0 0 2em 0;
 	}
@@ -1875,7 +1879,7 @@
 			form.search > input:first-child {
 				padding-left: 2.5em;
 			}
-
+*/
 	label {
 		color: #3c3b3b;
 		display: block;
@@ -2090,6 +2094,10 @@
 		}
 
 /* Image */
+
+	.nextImage {
+		position: relative !important;
+	}
 
 	.image {
 		border: 0;

@@ -7,9 +7,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Google AdSense */}
-      <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5287798851641238" crossorigin="anonymous" />
+      <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5287798851641238" crossorigin="anonymous" strategy='lazyOnload'/>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} strategy='lazyOnload' />
       <Script
           dangerouslySetInnerHTML={{
           __html: `
@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
             gtag('js', new Date());
             gtag('config', '${GA_TRACKING_ID}');
         `}}
+        strategy='lazyOnload'
       />
       <Component {...pageProps} />
     </>

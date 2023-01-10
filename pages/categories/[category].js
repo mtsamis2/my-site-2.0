@@ -3,6 +3,7 @@ import ErrorPage from 'next/error'
 import Layout from '../../components/layout'
 import { getAllCategories, getPostsByCategory, getCategoryBySlug } from '../../lib/api'
 import DateComponent from '../../components/date'
+import Image from 'next/image'
 
 export default function Category({ posts, category, preview }) {
   const router = useRouter()
@@ -37,11 +38,13 @@ export default function Category({ posts, category, preview }) {
                     </time>
                   </header>
                   <a className="image" href={`/posts/${post.slug}`}>
-                    <img
+                    <Image
                       src={post.coverImage.url}
                       alt={`The cover image for the article '${post.title}'`}
                       aria-label={`The cover image for the article '${post.title}'`}
                       loading='lazy'
+                      fill
+                      className={'nextImage'}
                     />
                   </a>
                 </article>
