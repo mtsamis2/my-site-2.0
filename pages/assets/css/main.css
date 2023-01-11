@@ -1478,7 +1478,7 @@
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
-		color: #2ebaae;
+		color: #22c0ac;
 		text-decoration: none;
 	}
 
@@ -1490,11 +1490,11 @@
 		}
 
 		a:hover {
-			color: #D14551 !important;
+			color: #2ee2d8 !important;
 		}
 
 		a:hover:before {
-			color: #D14551 !important;
+			color: #2ee2d8 !important;
 		}
 
 	strong, b {
@@ -1527,7 +1527,7 @@
 	}
 
 	h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-		color: #2ebaae !important;
+		color: #22c0ac !important;
 	}
 
 	h2 {
@@ -1592,7 +1592,7 @@
 			line-height: 1.75em;
 			padding: 1em 1.5em;
 			overflow-x: auto;
-			color: #2ebaae !important;
+			color: #22c0ac !important;
 		}
 
 	hr {
@@ -1745,8 +1745,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 1px #2ebaae;
-			color: #2ebaae !important;
+			box-shadow: inset 0 0 0 1px #22c0ac;
+			color: #22c0ac !important;
 		}
 
 			input[type="submit"]:hover:active,
@@ -1925,8 +1925,8 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #2ebaae;
-			box-shadow: inset 0 0 0 1px #2ebaae;
+			border-color: #22c0ac;
+			box-shadow: inset 0 0 0 1px #22c0ac;
 		}
 
 	.select-wrapper {
@@ -2035,8 +2035,8 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #2ebaae;
-			box-shadow: 0 0 0 1px #2ebaae;
+			border-color: #22c0ac;
+			box-shadow: 0 0 0 1px #22c0ac;
 		}
 
 	input[type="radio"] + label:before {
@@ -3431,7 +3431,7 @@
 					}
 
 					#menu .links > li a:hover h3 {
-						color: #2ebaae;
+						color: #22c0ac;
 					}
 
 				#menu .links > li:first-child {
