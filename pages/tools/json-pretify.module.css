@@ -1,5 +1,10 @@
+.toolHeader {
+  text-align: center;
+}
+
 .container {
   display: flex;
+  margin: 20px;
 }
 
 .left {
