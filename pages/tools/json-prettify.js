@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './json-pretify.module.css';
+import styles from './json-prettify.module.css';
 import Layout from '../../components/layout'
 
 function JSONPrettyPrinter(props) {
@@ -86,10 +86,10 @@ function JSONPrettyPrinter(props) {
     <div className='single'>
       <div id='wrapper'>
         <Layout
-          title={'Json Pretify/Minify - MikeTsamis.com'}
+          title={'Json Prettify/Minify - MikeTsamis.com'}
           description={'Easily format and beautify your JSON code with our online JSON editor. Features include JSON validation, minify, upload, copy, and download. Perfect for developers and anyone working with JSON data.'}
         >
-          <h2 className={styles.toolHeader}>JSON Pretify/Minify Tool</h2>
+          <h2 className={styles.toolHeader}>JSON Prettify/Minify Tool</h2>
           <div className={styles.container}>
             <div className={styles.left}>
               <h3 className={styles.center}>Input</h3>
@@ -110,7 +110,7 @@ function JSONPrettyPrinter(props) {
             </div>
           </div>
           <div>
-            <h2>Instructions for using JSON Pretify/Minify</h2>
+            <h2>Instructions for using JSON Prettify/Minify</h2>
             <ol>
               <li>Copy/paste your JSON data into the "Input" text area or upload a JSON file using the "Choose File" button.</li>
               <li>You can format and beautify the data by clicking on the "Prettify" button. This will automatically indent the JSON data and make it more readable.</li>
@@ -120,7 +120,7 @@ function JSONPrettyPrinter(props) {
               <li>Click "Clear" to clear all input.</li>
               <li>Click "Sample JSON" if you need to generate dummy JSON data.</li>
             </ol>
-            <p>That's all there is to it! With this JSON pretify/minify editor tool, you can easily format and beautify your JSON data, making it easier to read and understand.</p>
+            <p>That's all there is to it! With this JSON prettify/minify editor tool, you can easily format and beautify your JSON data, making it easier to read and understand.</p>
           </div>
         </Layout>
       </div>

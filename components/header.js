@@ -6,7 +6,7 @@ const Header = () => (
               <li><a href="/categories/raspberry-pi-projects">Raspberry Pi Projects</a></li>
               <li><a href="/categories/software-development">Software Development</a></li>
               <li><a href="/categories/git-faq">Git FAQ</a></li>
-              <li><a href="/tools/json-pretify">Tools</a></li>
+              <li><a href="/tools/json-prettify">Tools</a></li>
           </ul>
       </nav>
       {/* TODO: Create a Searchbar component
