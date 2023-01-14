@@ -89,6 +89,7 @@ function JSONPrettyPrinter(props) {
           title={'Json Prettify/Minify - MikeTsamis.com'}
           description={'Easily format and beautify your JSON code with our online JSON editor. Features include JSON validation, minify, upload, copy, and download. Perfect for developers and anyone working with JSON data.'}
         >
+          <div />
           <h2 className={styles.toolHeader}>JSON Prettify/Minify Tool</h2>
           <div className={styles.container}>
             <div className={styles.left}>
@@ -122,6 +123,7 @@ function JSONPrettyPrinter(props) {
             </ol>
             <p>That's all there is to it! With this JSON prettify/minify editor tool, you can easily format and beautify your JSON data, making it easier to read and understand.</p>
           </div>
+          <div />
         </Layout>
       </div>
     </div>
