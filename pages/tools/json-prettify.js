@@ -2,6 +2,45 @@ import { useState } from 'react';
 import styles from './json-prettify.module.css';
 import Layout from '../../components/layout'
 
+const EXAMPLE_DATA_JSON = [
+  {
+    "name": "John Smith",
+    "age": 35,
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zip": "98765"
+    }
+  },
+  {
+    "name": "Jane Doe",
+    "age": 28,
+    "address": {
+      "street": "456 Market St",
+      "city": "New City",
+      "state": "NY",
+      "zip": "12345"
+    }
+  }
+];
+
+const SAMPLE_DATA_JSON = `{
+  "name": "John Smith",
+  "age": 30,
+  "address": {
+    "streetAddress": "25 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021"
+  },
+  "skills": [
+    "JavaScript",
+    "React",
+    "Node.js"
+  ]
+}`
+
 function JSONPrettyPrinter(props) {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
@@ -60,21 +99,7 @@ function JSONPrettyPrinter(props) {
   }
 
   function insertSampleJSON() {
-    setInput(`{
-    "name": "John Smith",
-    "age": 30,
-    "address": {
-      "streetAddress": "21 2nd Street",
-      "city": "New York",
-      "state": "NY",
-      "postalCode": "10021"
-    },
-    "skills": [
-      "JavaScript",
-      "React",
-      "Node.js"
-    ]
-  }`);
+    setInput(SAMPLE_DATA_JSON);
   }
 
   function clear() {
@@ -86,10 +111,9 @@ function JSONPrettyPrinter(props) {
     <div className='single'>
       <div id='wrapper'>
         <Layout
-          title={'Json Prettify/Minify - MikeTsamis.com'}
+          title={'Json Prettify/Minify Tool - MikeTsamis.com'}
           description={'Easily format and beautify your JSON code with our online JSON editor. Features include JSON validation, minify, upload, copy, and download. Perfect for developers and anyone working with JSON data.'}
         >
-          <div />
           <h2 className={styles.toolHeader}>JSON Prettify/Minify Tool</h2>
           <div className={styles.container}>
             <div className={styles.left}>
@@ -123,7 +147,23 @@ function JSONPrettyPrinter(props) {
             </ol>
             <p>That's all there is to it! With this JSON prettify/minify editor tool, you can easily format and beautify your JSON data, making it easier to read and understand.</p>
           </div>
-          <div />
+          <div>
+            <h2>What is JSON?</h2>
+            <p>JSON (JavaScript Object Notation) is a simple format for exchanging data. It can be easily read, written and analyzed by both us and machines. It's based on a subset of the JavaScript programming language and is mostly used to transfer data between a server and web application. JSON is a completely language-independent textual format, but uses conventions familiar to programmers from the C family of languages such as C, C++, C#, Java, JavaScript, Perl, and Python. JSON is often used as a simple data exchange format between different systems, making it easy to read and write.</p>
+            <p>An example of JSON data is a list of objects, each representing a person, with properties such as name, age, and address:</p>
+            <pre>
+              <code>
+                {JSON.stringify(EXAMPLE_DATA_JSON, null, 2)}
+              </code>
+            </pre>
+            <p>In the above example, we have an array of objects where each property is a key-value pair. Each object above contains a person's name, age and address.</p>
+            <p>Here are some other great resources explaining JSON format in more detail:</p>
+            <ul>
+              <li><a title="JSON.org" href="https://json.org/">JSON.org</a></li>
+              <li><a title="w3schools.com's JSON Tutorial" href="https://www.w3schools.com/js/js_json_intro.asp">JSON Tutorial from w3schools.com</a></li>
+              <li><a title="Wikipedia link to JSON" href="https://en.wikipedia.org/wiki/JSON">JSON Explained on Wikipedia</a></li>
+            </ul>
+          </div>
         </Layout>
       </div>
     </div>
