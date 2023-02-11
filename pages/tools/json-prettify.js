@@ -157,6 +157,17 @@ function JSONPrettyPrinter(props) {
               </code>
             </pre>
             <p>In the above example, we have an array of objects where each property is a key-value pair. Each object above contains a person's name, age and address.</p>
+            <h2>What's the Difference Between JSON and JSONP and Which Content Type Do I Use?</h2>
+            <p>JSON and JSONP are two data formats commonly used in web development to exchange data between the client and server. Here's the difference between JSON and JSONP and when you should use each one.</p>
+            <p>JSON is used to represent data in a structured format and is commonly used in APIs to send data between the client and server. The content type for JSON data should be set to <b>"application/json"</b>.</p>
+            <p>JSONP (JSON with Padding) is a technique used to overcome the same-origin policy limitation placed by browsers. The same-origin policy prevents a website from making requests to a different domain from the website's. JSONP works by wrapping the JSON data in a callback function and passing that JSON data as an argument to that function like this:</p>
+            <pre>
+              <code>
+                {`myFunctionCall({"Name": "John", "Sport": "Baseball"});`}
+              </code>
+            </pre>
+            <p>The content type of JSONP data should be set to <b>"application/javascript"</b>.</p>
+            <p>Therefore, if you need to exchange data between the client and server within the same domain, use JSON. Use JSONP when you need to exchange data between the client and server in different domains. Both JSON and JSONP are useful data formats with different purposes and use cases.</p>
             <p>Here are some other great resources explaining JSON format in more detail:</p>
             <ul>
               <li><a title="JSON.org" href="https://json.org/">JSON.org</a></li>
