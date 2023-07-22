@@ -21,11 +21,6 @@ module.exports = {
         source: '/categories/:oldPath/:slug',
         destination: '/categories/:slug',
         permanent: true,
-      },
-      {
-        source: '/tools/json-pretify',
-        destination: '/tools/json-prettify',
-        permanent: true,
       }
     ]
   },
